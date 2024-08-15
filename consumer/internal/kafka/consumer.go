@@ -10,8 +10,6 @@ import (
 	"97.GO/consumer/internal/models"
 	"github.com/twmb/franz-go/pkg/kgo"
 )
-
-// SetupKafkaConsumer initializes Kafka consumer
 func SetupKafkaConsumer() *kgo.Client {
 	client, err := kgo.NewClient(
 		kgo.SeedBrokers("localhost:9092"),
