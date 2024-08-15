@@ -14,7 +14,7 @@ func SetupKafkaConsumer() *kgo.Client {
 	client, err := kgo.NewClient(
 		kgo.SeedBrokers("localhost:9092"),
 		kgo.ConsumeTopics("order_events"),
-		kgo.WithLogger(kgo.BasicLogger(os.Stdout, kgo.LogLevelInfo, nil)), // `os.Stdout` io.Writer interfeysiga mos keladi
+		kgo.WithLogger(kgo.BasicLogger(os.Stdout, kgo.LogLevelInfo, nil)),
 	)
 	if err != nil {
 		log.Fatalf("Failed to create Kafka consumer: %v", err)
